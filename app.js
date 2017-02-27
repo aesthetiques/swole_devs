@@ -1,12 +1,21 @@
 'use strict';
 
-function newElement(elType, elAttribute, elAttributeName, elParentId, elText){
+function newElement(elType, elId, elParentId, elText){
   var el = document.createElement(elType);
-  el.setAttribute(elAttribute, elAttributeName);
+  el.setAttribute('href', '#');
+  el.setAttribute('class', 'my-button');
+  el.setAttribute('id', elId);
   el.textContent = elText;
   var parentEl = document.getElementById(elParentId);
   parentEl.appendChild(el);
 }
+
+function upperCaseFirst(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+console.log(upperCaseFirst('hello'));
+var choices = [];
+var numAns = 0;
 
 function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
   this.sun = sun,
@@ -24,7 +33,7 @@ function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
 
 Workout.prototype.printWorkout = function(){
   for (var i = 0; i < this.days.length; i++){
-    console.log(this.days[i]);
+    // console.log(this.days[i]);
   }
 };
 
@@ -46,3 +55,53 @@ var beginBuildFive = new Workout('Rest',
 0,1,1);
 
 beginBuildThree.printWorkout();
+
+var answer = document.getElementById('options-container');
+answer.addEventListener('click', answerCast);
+
+function answerCast(event){
+  event.preventDefault();
+  event.stopPropagation();
+  // console.log('listening');
+
+  var target = event.target;
+  var targetId = target.getAttribute('id');
+
+  var lvls = ['beginner','intermediate','advanced'];
+  var goals = ['tone','build','crossfit'];
+
+  if (numAns == 0) {
+    if (targetId == 'beginner') {
+      choices.push(0);
+      // console.log('is beginner');
+    } else if (targetId == 'intermediate') {
+      choices.push(1);
+    } else if (targetId == 'advanced') {
+      choices.push(2);
+    }
+    for (var i = 0; i < lvls.length; i++){
+      var parentEl = document.getElementById('options-container');
+      var el = document.getElementById(lvls[i]);
+      console.log(lvls[i]);
+      console.log(el);
+      parentEl.removeChild(el);
+      newElement('a', goals[i], 'options-container', upperCaseFirst(goals[i]));
+    }
+  } else if (numAns == 1) {
+    if (targetId == 'tone') {
+      choices.push(0);
+    } else if (targetId == 'build') {
+      choices.push(1);
+    } else if (targetId == 'crossfit') {
+      console.log('gtfo');
+    }
+
+  } else if (true) {
+    if (targetId == 'three-day') {
+      choices.push(0);
+    } else if (targetId == 'five-day') {
+      choices.push(1);
+    }
+  }
+  numAns++;
+}
