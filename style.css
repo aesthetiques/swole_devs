@@ -55,17 +55,16 @@ body{
   background-color: grey;
 }
 .questionContainer{
-  border: 2px solid black;
-  width: 500px;
-  height: 700px;
-  margin-left: 140px;
-  margin-top: 50px;
+
+
 }
 
 .question{
-  border: 2px solid black;
+
 }
 
-.optionContainer{
-  border: 2px solid black;
+.optionsContainer{
+
+
+
 }
