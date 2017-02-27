@@ -1,0 +1,15 @@
+.aboutUsContainer{
+  display: inline-block;
+
+}
+.annaContainer, .calebContainer, .patrickContainer, .scottContainer{
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  border: 2px solid black;
+}
+
+.personPic img{
+  width: 240px;
+  height: 320px;
+}
