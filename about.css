@@ -12,4 +12,5 @@
 .personPic img{
   width: 240px;
   height: 320px;
+  border-radius: 50%;
 }
