@@ -10,6 +10,11 @@ function newElement(elType, elId, elParentId, elText){
   var parentEl = document.getElementById(elParentId);
   parentEl.appendChild(el);
 }
+//save to local saveProductsToLocalStorage
+function saveChoicesToLocalStorage(choices){
+  localStorage.choices = JSON.stringify(choices);
+  console.log('Saved to local storage');
+}
 
 function upperCaseFirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -143,4 +148,5 @@ function answerCast(event){
   }
   numAns++;
   console.log(choices);
+  saveChoicesToLocalStorage(choices);
 }
