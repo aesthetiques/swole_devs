@@ -1,5 +1,6 @@
 body {
-  background-image: url('https://www.pexels.com/photo/brown-and-white-track-field-163444/');
+  background-image: url('img/aboutBackground.jpeg');
+  background-size: cover;
 }
 
 .aboutUsContainer{
@@ -11,10 +12,15 @@ body {
   width: 300px;
   height: 600px;
   border: 2px solid black;
+  font-size: 18px;
 }
 
 .personPic img{
   width: 240px;
   height: 320px;
   border-radius: 50%;
+}
+
+.personAbout {
+  
 }
