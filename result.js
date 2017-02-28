@@ -1,4 +1,12 @@
-var choices = JSON.parse(localstorage.choices);
+var choices = JSON.parse(localStorage.choices);
+
+function newElement(elType, elId, elParentId, elText){
+  var el = document.createElement(elType);
+  el.setAttribute('id', elId);
+  el.textContent = elText;
+  var parentEl = document.getElementById(elParentId);
+  parentEl.appendChild(el);
+}
 
 //construction function for each workout
 function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
@@ -40,7 +48,10 @@ function findWorkout(){
     var currentWorkout = workouts[i];
     if(choices[0] === currentWorkout.lvl && choices[1] === currentWorkout.goal && choices[2] === currentWorkout.split){
       console.log(currentWorkout.days);
-      return(currentWorkout);
+      for(var i = 0; i < currentWorkout.days.length; i++){
+        var createWorkout = newElement('li', 'chosenWorkout','workoutList', currentWorkout.days[i]);
+        // return(currentWorkout);
+      }
     }
   }
 }
