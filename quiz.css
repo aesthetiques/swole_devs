@@ -1,6 +1,6 @@
 /*general formatting && styling*/
 body{
-  background: url('img/main-background.jpg');
+  background: url('img/stairs-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -13,8 +13,8 @@ body{
 .navbar{
 }
 #question-container{
-  background-color: rgba(77,77,77, 0.75);
-  border: 2px solid rgba(77,77,77, 0.75);
+  background-color: rgba(215,215,215, 0.35);
+  border: 2px solid rgba(215,215,215, 0.35);
   border-radius: 5px;
   width: 700px;
   min-height: 450px;

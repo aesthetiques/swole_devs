@@ -1,3 +1,4 @@
+
 body {
   background-image: url('img/aboutBackground.jpeg');
   height: 1450px;
@@ -5,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 .aboutUsContainer{
   display: inline-block;
