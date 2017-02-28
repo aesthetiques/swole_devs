@@ -1,4 +1,5 @@
 'use strict';
+var parentEl = document.getElementById('options-container');
 
 function newElement(elType, elId, elParentId, elText){
   var el = document.createElement(elType);
@@ -17,7 +18,7 @@ console.log(upperCaseFirst('hello'));
 var choices = [];
 var numAns = 0;
 
-function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
+function Workout(sun, mon, tues, weds, thurs, fri, sat, lvl, goal, split){
   this.sun = sun,
   this.mon = mon,
   this.tues = tues,
@@ -69,6 +70,7 @@ function answerCast(event){
 
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
+  var daySplit = ['3 day', '5 day'];
 
 //below code counts num of clicks
   if (numAns == 0) {
@@ -87,6 +89,7 @@ function answerCast(event){
       var el = document.getElementById(lvls[i]);
       console.log(lvls[i]);
       console.log(el);
+      // parentEl.innerHTML = ' ';
       parentEl.removeChild(el);
       newElement('a', goals[i], 'options-container', upperCaseFirst(goals[i]));
     }
@@ -98,7 +101,20 @@ function answerCast(event){
     } else if (targetId == 'crossfit') {
       console.log('gtfo');
     }
-//if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
+    for (var k = 0; k < goals.length; k++){
+      var parentEl = document.getElementById('options-container');
+      var el = document.getElementById(goals[k]);
+      console.log(lvls[k]);
+      console.log(el);
+      // parentEl.innerHTML = ' ';
+      parentEl.removeChild(el);
+    }
+    for (var k = 0; k < daySplit.length; k++){
+      var parentEl = document.getElementById('options-container');
+      var el = document.getElementById(goals[k]);
+      newElement('a', daySplit[k], 'options-container', daySplit[k]);
+    }
+    //if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
   } else if (numAns == 2) {
     if (targetId == 'three-day') {
       choices.push(0);
@@ -106,6 +122,15 @@ function answerCast(event){
       choices.push(1);
     }
   }
+  // for (var j = 0; j < daySplit.length; j++){
+  //   var parentEl = document.getElementById('options-container');
+  //   var el = document.getElementById(goals[i]);
+  //   console.log(goals[i]);
+  //   console.log(el);
+  //   parentEl.removeChild(el);
+  //   // parentEl.innerHTML = ' ';
+  //   newElement('a', daySplit[j], 'options-container', upperCaseFirst(daySplit[j]));
+  // }
   numAns++;
   console.log(choices);
 }
