@@ -61,12 +61,14 @@ var answer = document.getElementById('options-container');
 answer.addEventListener('click', answerCast);
 
 function answerCast(event){
+  console.log('answerCast, numAns: ', numAns);
   event.preventDefault();
   event.stopPropagation();
   // console.log('listening');
 
   var target = event.target;
   var targetId = target.getAttribute('id');
+  console.log('targetId: ', targetId);
 
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
@@ -77,18 +79,21 @@ function answerCast(event){
 //if clicks counted is zero find the Id of the click on and push a certain number to choices array
     if (targetId == 'beginner') {
       choices.push(0);
+      console.log(choices);
       // console.log('is beginner');
     } else if (targetId == 'intermediate') {
       choices.push(1);
+      console.log(choices);
     } else if (targetId == 'advanced') {
       choices.push(2);
+      console.log(choices);
     }
     // after first click run below, below takes the child elements of option contianer and removes them, appends newElement from goals array
     for (var i = 0; i < lvls.length; i++){
       var parentEl = document.getElementById('options-container');
       var el = document.getElementById(lvls[i]);
-      console.log(lvls[i]);
-      console.log(el);
+      // console.log(lvls[i]);
+      // console.log(el);
       // parentEl.innerHTML = ' ';
       parentEl.removeChild(el);
       newElement('a', goals[i], 'options-container', upperCaseFirst(goals[i]));
@@ -96,16 +101,18 @@ function answerCast(event){
   } else if (numAns == 1) {
     if (targetId == 'tone') {
       choices.push(0);
+      console.log(choices);
     } else if (targetId == 'build') {
       choices.push(1);
+      console.log(choices);
     } else if (targetId == 'crossfit') {
       console.log('gtfo');
     }
     for (var k = 0; k < goals.length; k++){
       var parentEl = document.getElementById('options-container');
       var el = document.getElementById(goals[k]);
-      console.log(lvls[k]);
-      console.log(el);
+      // console.log(goals[k]);
+      // console.log(el);
       // parentEl.innerHTML = ' ';
       parentEl.removeChild(el);
     }
@@ -116,21 +123,24 @@ function answerCast(event){
     }
     //if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
   } else if (numAns == 2) {
-    if (targetId == 'three-day') {
+    console.log('got into numAns 2');
+    if (targetId == '3 day') {
       choices.push(0);
-    } else if (targetId == 'five-day') {
+      console.log(choices);
+    } else if (targetId == '5 day') {
       choices.push(1);
+      console.log(choices);
+    } else {
+      console.log('ha ha');
     }
   }
-  // for (var j = 0; j < daySplit.length; j++){
-  //   var parentEl = document.getElementById('options-container');
-  //   var el = document.getElementById(goals[i]);
-  //   console.log(goals[i]);
-  //   console.log(el);
-  //   parentEl.removeChild(el);
-  //   // parentEl.innerHTML = ' ';
-  //   newElement('a', daySplit[j], 'options-container', upperCaseFirst(daySplit[j]));
-  // }
+  for (var j = 0; j < daySplit.length; j++){
+    var parentEl = document.getElementById('options-container');
+    var el = document.getElementById(daySplit[j]);
+    // console.log(choices);
+    // console.log(el);
+    // parentEl.removeChild(el);
+  }
   numAns++;
   console.log(choices);
 }
