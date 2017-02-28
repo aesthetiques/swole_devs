@@ -1,26 +1,58 @@
 body {
+  height: 1450px;
   background-image: url('img/aboutBackground.jpeg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .aboutUsContainer{
   display: inline-block;
+  min-width: 700px;
 
 }
-.annaContainer, .calebContainer, .patrickContainer, .scottContainer{
+
+#aboutUsTitle {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Squada One', cursive;
+}
+
+.name-header {
+    font-family: 'Squada One', cursive;
+}
+
+#annaContainer, #calebContainer, #patrickContainer, #scottContainer{
+  width: 400px;
+  height: 575px;
+  position: absolute;
   display: inline-block;
-  width: 300px;
-  height: 600px;
-  border: 2px solid black;
-  font-size: 18px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: -10px;
+  border-radius: 10px;
+  /*border: 2px solid black;*/
+
 }
 
-.personPic img{
+#calebContainer, #scottContainer {
+  left: 50%;
+}
+
+#patrickContainer, #scottContainer {
+  top: 810px;
+}
+
+.person-pic img{
   width: 240px;
   height: 320px;
   border-radius: 50%;
 }
 
-.personAbout {
-  
+.person-about {
+  font-size: 18px;
+  /*font-weight: bold;*/
+  font-family: 'Roboto', sans-serif;
 }
