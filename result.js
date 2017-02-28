@@ -65,3 +65,5 @@ function displayWorkout(workout){
     }
   }
 }
+
+displayWorkout(selectedWorkout);
