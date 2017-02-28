@@ -1,6 +1,7 @@
 'use strict';
 var parentEl = document.getElementById('options-container');
 
+//create each button element
 function newElement(elType, elId, elParentId, elText){
   var el = document.createElement(elType);
   el.setAttribute('href', '#');
@@ -10,12 +11,15 @@ function newElement(elType, elId, elParentId, elText){
   var parentEl = document.getElementById(elParentId);
   parentEl.appendChild(el);
 }
+
 //save to local saveProductsToLocalStorage
 function saveChoicesToLocalStorage(choices){
   localStorage.choices = JSON.stringify(choices);
   console.log('Saved to local storage');
 }
 
+//uppercase what's in the textContent of the html nodes you create,
+//so that the buttons will appear properly
 function upperCaseFirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -23,6 +27,7 @@ console.log(upperCaseFirst('hello'));
 var choices = [];
 var numAns = 0;
 
+//create the workouts, repeat for beginner, intermed, advanced workout splits
 function Workout(sun, mon, tues, weds, thurs, fri, sat, lvl, goal, split){
   this.sun = sun,
   this.mon = mon,
@@ -78,6 +83,7 @@ function answerCast(event){
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
   var daySplit = ['3 day', '5 day'];
+  var submit = ['Show me my results!'];
 
 //below code counts num of clicks
   if (numAns == 0) {
@@ -113,6 +119,8 @@ function answerCast(event){
     } else if (targetId == 'crossfit') {
       console.log('gtfo');
     }
+    //after second click, run this to delete the old buttons; this is separated
+    //because there are a different # of buttons from the final set
     for (var k = 0; k < goals.length; k++){
       var parentEl = document.getElementById('options-container');
       var el = document.getElementById(goals[k]);
@@ -121,6 +129,7 @@ function answerCast(event){
       // parentEl.innerHTML = ' ';
       parentEl.removeChild(el);
     }
+    //because there are a different number of buttons in the new set, we loop a different amount for creation.
     for (var k = 0; k < daySplit.length; k++){
       var parentEl = document.getElementById('options-container');
       var el = document.getElementById(goals[k]);
@@ -139,13 +148,13 @@ function answerCast(event){
       console.log('ha ha');
     }
   }
-  for (var j = 0; j < daySplit.length; j++){
-    var parentEl = document.getElementById('options-container');
-    var el = document.getElementById(daySplit[j]);
-    // console.log(choices);
-    // console.log(el);
-    // parentEl.removeChild(el);
-  }
+  // trying to make a submit/take me to results button
+  // for (var j = 0; j < daySplit.length; j++){
+  //   var parentEl = document.getElementById('options-container');
+  //   var el = document.getElementById(daySplit[j]);
+  //   parentEl.removeChild(el);
+  // }
+  // newElement('a', submit, 'options-container', upperCaseFirst(submit[0]));
   numAns++;
   console.log(choices);
   saveChoicesToLocalStorage(choices);
