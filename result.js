@@ -48,11 +48,14 @@ function findWorkout(){
     var currentWorkout = workouts[i];
     if(choices[0] === currentWorkout.lvl && choices[1] === currentWorkout.goal && choices[2] === currentWorkout.split){
       console.log(currentWorkout.days);
-      for(var i = 0; i < currentWorkout.days.length; i++){
-        var createWorkout = newElement('li', 'chosenWorkout','workoutList', currentWorkout.days[i]);
-        // return(currentWorkout);
-      }
+      return(currentWorkout);
     }
   }
 }
-findWorkout();
+var selectedWorkout = findWorkout();
+
+displayWorkout(workout){
+  for(var i = 0; i < currentWorkout.days.length; i++){
+    var createWorkout = newElement('li', 'chosenWorkout','workoutList', currentWorkout.days[i]);
+  }  
+}
