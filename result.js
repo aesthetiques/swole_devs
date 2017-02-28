@@ -2,8 +2,6 @@ var choices = JSON.parse(localStorage.choices);
 
 function newElement(elType, elId, elParentId, elText){
   var el = document.createElement(elType);
-  el.setAttribute('href', '#');
-  el.setAttribute('class', 'my-button');
   el.setAttribute('id', elId);
   el.textContent = elText;
   var parentEl = document.getElementById(elParentId);
@@ -50,7 +48,10 @@ function findWorkout(){
     var currentWorkout = workouts[i];
     if(choices[0] === currentWorkout.lvl && choices[1] === currentWorkout.goal && choices[2] === currentWorkout.split){
       console.log(currentWorkout.days);
-      return(currentWorkout);
+      for(var i = 0; i < currentWorkout.days.length; i++){
+        var createWorkout = newElement('li', 'chosenWorkout','workoutList', currentWorkout.days[i]);
+        // return(currentWorkout);
+      }
     }
   }
 }
