@@ -4,10 +4,19 @@ html{
   margin: 0 7.5%;
 }
 
-.workoutContainer{
+#workout-container{
   font-size: 50px;
-  background-color: white;
-  opacity: .5;
+  color: #fff;
+  /*background-color: white;
+  opacity: .5;*/
+}
+
+.day-title {
+  font-family: 'Squada One',cursive;
+}
+
+.day-li {
+  font-family: 'Roboto',sans-serif;
 }
 
 .banner{

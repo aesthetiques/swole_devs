@@ -61,7 +61,7 @@ function displayWorkout(workout){
   for(var i = 0; i < workout.days.length; i++){
     var todaysWorkout = workout.days[i];
     for(var j = 0; j < todaysWorkout.length; j++){
-      newElement('li', 'class', week[i] + '-li', week[i] + '-ul', todaysWorkout[j]);
+      newElement('li', 'class', 'day-li', week[i] + '-ul', todaysWorkout[j]);
     }
   }
 }
