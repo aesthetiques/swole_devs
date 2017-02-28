@@ -12,6 +12,16 @@ function newElement(elType, elId, elParentId, elText){
   parentEl.appendChild(el);
 }
 
+// function newSubmit(){
+//   var parentEl = document.getElementById('options-container');
+//   var takeToResults = document.createElement('a');
+//   takeToResults.setAttribute('href', 'results.html');
+//   takeToResults.setAttribute('class', 'my-button');
+//   takeToResults.setAttribute('id', 'submit-button');
+//   takeToResults.textContent = 'Take me to my results!';
+//   parentEl.appendChild(takeToResults);
+// }
+
 //save to local saveProductsToLocalStorage
 function saveChoicesToLocalStorage(choices){
   localStorage.choices = JSON.stringify(choices);
@@ -25,7 +35,7 @@ function upperCaseFirst(string) {
 }
 console.log(upperCaseFirst('hello'));
 var choices = [];
-var numAns = 0;
+var numAns = 1;
 
 //create the workouts, repeat for beginner, intermed, advanced workout splits
 function Workout(sun, mon, tues, weds, thurs, fri, sat, lvl, goal, split){
@@ -72,8 +82,11 @@ answer.addEventListener('click', answerCast);
 
 function answerCast(event){
   console.log('answerCast, numAns: ', numAns);
-  event.preventDefault();
-  event.stopPropagation();
+
+  if (numAns < 3) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
   // console.log('listening');
 
   var target = event.target;
@@ -83,19 +96,22 @@ function answerCast(event){
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
   var daySplit = ['3 day', '5 day'];
-  var submit = ['Show me my results!'];
+  var submit = 'Show me my results!';
 
 //below code counts num of clicks
-  if (numAns == 0) {
+  if (numAns == 1) {
 //if clicks counted is zero find the Id of the click on and push a certain number to choices array
     if (targetId == 'beginner') {
+      numAns++;
       choices.push(0);
       console.log(choices);
       // console.log('is beginner');
     } else if (targetId == 'intermediate') {
+      numAns++;
       choices.push(1);
       console.log(choices);
     } else if (targetId == 'advanced') {
+      numAns++;
       choices.push(2);
       console.log(choices);
     }
@@ -109,11 +125,13 @@ function answerCast(event){
       parentEl.removeChild(el);
       newElement('a', goals[i], 'options-container', upperCaseFirst(goals[i]));
     }
-  } else if (numAns == 1) {
+  } else if (numAns == 2) {
     if (targetId == 'tone') {
+      numAns++;
       choices.push(0);
       console.log(choices);
     } else if (targetId == 'build') {
+      numAns++;
       choices.push(1);
       console.log(choices);
     } else if (targetId == 'crossfit') {
@@ -136,26 +154,30 @@ function answerCast(event){
       newElement('a', daySplit[k], 'options-container', daySplit[k]);
     }
     //if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
-  } else if (numAns == 2) {
+  } else if (numAns == 3) {
     console.log('got into numAns 2');
     if (targetId == '3 day') {
+      numAns++;
       choices.push(0);
       console.log(choices);
     } else if (targetId == '5 day') {
+      numAns++;
       choices.push(1);
       console.log(choices);
-    } else {
-      console.log('ha ha');
     }
+    //loop through deletion of previous buttons
+    for (var j = 0; j < daySplit.length; j++){
+      var parentEl = document.getElementById('options-container');
+      var el = document.getElementById(daySplit[j]);
+      parentEl.removeChild(el);
+    }
+    // 'take me to my results' button below
+    var parentEl = document.getElementById('options-container');
+    var takeToResults = document.createElement('a');
+    takeToResults.setAttribute('href', 'results.html');
+    takeToResults.setAttribute('class', 'my-button');
+    takeToResults.textContent = 'Take me to my results!';
+    parentEl.appendChild(takeToResults);
   }
-  // trying to make a submit/take me to results button
-  // for (var j = 0; j < daySplit.length; j++){
-  //   var parentEl = document.getElementById('options-container');
-  //   var el = document.getElementById(daySplit[j]);
-  //   parentEl.removeChild(el);
-  // }
-  // newElement('a', submit, 'options-container', upperCaseFirst(submit[0]));
-  numAns++;
-  console.log(choices);
   saveChoicesToLocalStorage(choices);
 }
