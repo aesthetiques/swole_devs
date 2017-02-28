@@ -1,6 +1,7 @@
 /*general formatting && styling*/
-html{
-  background: url('img/main-background.jpg') no-repeat center center fixed;
+body{
+  background: url('img/stairs-background.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .banner{

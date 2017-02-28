@@ -1,3 +1,6 @@
+body{
+  background: url('img/track-background.jpeg')
+}
 .aboutUsContainer{
   display: inline-block;
 
