@@ -70,7 +70,9 @@ function answerCast(event){
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
 
+//below code counts num of clicks
   if (numAns == 0) {
+//if clicks counted is zero find the Id of the click on and push a certain number to choices array
     if (targetId == 'beginner') {
       choices.push(0);
       // console.log('is beginner');
@@ -79,6 +81,7 @@ function answerCast(event){
     } else if (targetId == 'advanced') {
       choices.push(2);
     }
+    // after first click run below, below takes the child elements of option contianer and removes them, appends newElement from goals array
     for (var i = 0; i < lvls.length; i++){
       var parentEl = document.getElementById('options-container');
       var el = document.getElementById(lvls[i]);
@@ -95,8 +98,8 @@ function answerCast(event){
     } else if (targetId == 'crossfit') {
       console.log('gtfo');
     }
-
-  } else if (true) {
+//if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
+  } else if (numAns == 2) {
     if (targetId == 'three-day') {
       choices.push(0);
     } else if (targetId == 'five-day') {
@@ -104,4 +107,5 @@ function answerCast(event){
     }
   }
   numAns++;
+  console.log(choices);
 }
