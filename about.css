@@ -8,8 +8,8 @@ html{
   height: 100px;
   color: white;
 }
-.aboutUsTitle{
-  width: 400px;
+#aboutUsTitle{
+  width: 260px;
 }
 h1{
   display: inline;
