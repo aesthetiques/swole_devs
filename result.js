@@ -33,12 +33,13 @@ var beginToneThree = new Workout(
   ['Run 1x15', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
   0,0,0);
+
 var beginToneFive = new Workout(
   'Beginner 5-day tone workout:',
   ['Rest'],
   ['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25', 'Crunches 5x25'],
   ['Run 1x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension 3x12', 'Chin-Ups 3x5'],
-  ['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell Press 3X12', 'Planks 2x60', 'Burpies 2x25'],
+  ['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell Press 3x12', 'Planks 2x60', 'Burpies 2x25'],
   ['Run 1x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension', '3x12Chin-Ups 3x5'],
   ['Run 1x15', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
@@ -49,7 +50,7 @@ var beginBuildThree = new Workout(
   ['Rest'],
   ['Squats 3x10', 'Bench Press 3x10','Barbell Rows 3x10','Crunches 4x25'],
   ['Rest'],
-  ['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Crunches 3,10'],
+  ['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Crunches 3x10'],
   ['Rest'],
   ['Squats 3x10','Bench 3x10', 'Barbell Rows 3x10', 'Crunches 4x25'],
   ['Rest'],
@@ -76,6 +77,7 @@ var intermediateToneThree = new Workout(
   ['Run 1x20', 'Bent Over Row 4x12', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
   1,0,0);
+
 var intermediateToneFive = new Workout(
   'Intermediate 5-day tone workout:',
   ['Rest'],
@@ -86,6 +88,7 @@ var intermediateToneFive = new Workout(
   ['Run 1x20', 'Inverted rows 4x12', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
   1,0,1);
+
 var intermediateBuildThree = new Workout(
   'Intermediate 3-day build workout:',
   ['Rest'],
@@ -96,6 +99,7 @@ var intermediateBuildThree = new Workout(
   ['Squats 3x10', 'Bench 3x10', 'Barbell Rows 3x10', 'Lat Pulldowns 3x10', 'Dips 5x10', 'Lateral Raises 4x10', 'Crunches 4x 25'],
   ['Rest'],
   1,1,0);
+
 var intermediateBuildFive = new Workout(
   'Intermediate 5-day build workout:',
   ['Rest'],
