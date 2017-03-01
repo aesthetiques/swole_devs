@@ -1,5 +1,5 @@
 html{
-  background: url('img/aboutBackground.jpeg') no-repeat center center fixed;
+  background: url('img/stairs-background.jpg') no-repeat center center fixed;
   background-size: cover;
   margin: 0 7.5%;
 }
@@ -73,13 +73,24 @@ h1{
   font-family: 'Squada One', cursive;
 }
 
+
 .name-header {
     font-family: 'Squada One', cursive;
+    text-align: center;
+    margin-top: 15px;
+    transition-duration: 1s;
+    z-index: 10;
+    font-size: 40px;
+}
+.name-header:hover{
+  transform:scale(1.5);
+  transition-duration: 1s;
 }
 
+
 #annaContainer, #calebContainer, #patrickContainer, #scottContainer{
-  width: 400px;
-  height: 575px;
+  width: 550px;
+  height: 750px;
   position: absolute;
   display: inline-block;
   background-color: rgba(0,0,0,0.5);
@@ -98,20 +109,29 @@ h1{
 
 #patrickContainer, #scottContainer {
   top: 810px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .person-pic img{
-  width: 260px;
-  height: 340px;
+  width: 240px;
+  height: 320px;
   border-radius: 50%;
+  margin-left: 155px;
+  margin-top: 70px;
+  transition-duration: 1s;
+  z-index: 5;
 }
 img:hover{
-  width: 320px;
-  height: 400px;
+   transform:scale(1.4);
+   transition-duration: 1s;
+   z-index: 5;
 }
 
 .person-about {
-  font-size: 18px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  font-size: 22px;
   /*font-weight: bold;*/
   font-family: 'Roboto', sans-serif;
 }
