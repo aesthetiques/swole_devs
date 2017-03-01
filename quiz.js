@@ -44,7 +44,7 @@ function answerCast(event){
 
   var lvls = ['beginner','intermediate','advanced'];
   var goals = ['tone','build','crossfit'];
-  var daySplit = ['3 day', '5 day'];
+  var daySplit = ['Three-day', 'Five-day'];
   var submit = 'Show me my results!';
 
 //below code counts num of clicks
@@ -106,11 +106,11 @@ function answerCast(event){
     //if clicks is at count 1, on click, target clicked by Id and push corresponing number into choices array
   } else if (numAns == 3) {
     console.log('got into numAns 2');
-    if (targetId == '3 day') {
+    if (targetId == 'Three-day') {
       numAns++;
       choices.push(0);
       console.log(choices);
-    } else if (targetId == '5 day') {
+    } else if (targetId == 'Five-day') {
       numAns++;
       choices.push(1);
       console.log(choices);

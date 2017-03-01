@@ -38,7 +38,7 @@ h1{
   position: absolute;
   background-color: black;
   opacity: .5;
-  min-width: 100px;
+  min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -67,7 +67,6 @@ h1{
   border-radius: 5px;
   width: 700px;
   min-height: 450px;
-  margin-left: 75px;
   margin-top: 12.5%;
 }
 #question{
