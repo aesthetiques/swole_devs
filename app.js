@@ -7,7 +7,7 @@ startQuizButton.setAttribute('class', 'my-button');
 startQuizButton.textContent = 'Take me to the Quiz!';
 parentEl.appendChild(startQuizButton);
 
-if (localStorage) {
+if (localStorage.choices) {
   var parentEl = document.getElementById('question-container');
   var hiddenQuizResults = document.createElement('a');
   hiddenQuizResults.setAttribute('href', 'results.html');
