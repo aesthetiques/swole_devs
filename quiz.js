@@ -83,7 +83,9 @@ function answerCast(event){
       choices.push(1);
       console.log(choices);
     } else if (targetId == 'crossfit') {
-      console.log('gtfo');
+      // numAns--;
+      alert('Yeah, no.');
+      return;
     } else {
       return;
     }
