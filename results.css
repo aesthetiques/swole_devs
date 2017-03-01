@@ -2,11 +2,13 @@ html{
   background: url('img/armcrossed-background.jpg') no-repeat center center fixed;
   background-size: cover;
   margin: 0 7.5%;
+  margin-bottom: 25px;
 }
 
 #workout-container{
   font-size: 50px;
   color: #fff;
+  margin-bottom: 65px;
   /*background-color: white;
   opacity: .5;*/
 }
@@ -92,10 +94,12 @@ h1{
   background-color: grey;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 25px;
+  margin-bottom: 0px;
   padding: 1rem;
   background-color: black;
   text-align: center;
