@@ -4,8 +4,12 @@ html{
   margin: 0 7.5%;
 }
 
+h2 {
+  font-size: 70px;
+}
+
 #workout-container{
-  font-size: 30px;
+  font-size: 35px;
   color: #fff;
   /*background-color: white;
   opacity: .5;*/
