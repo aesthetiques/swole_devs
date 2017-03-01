@@ -101,9 +101,13 @@ h1{
 }
 
 .person-pic img{
-  width: 240px;
-  height: 320px;
+  width: 260px;
+  height: 340px;
   border-radius: 50%;
+}
+img:hover{
+  width: 320px;
+  height: 400px;
 }
 
 .person-about {
