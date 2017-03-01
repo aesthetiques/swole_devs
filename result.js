@@ -23,19 +23,20 @@ function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
   this.split = split;
 }
 var beginToneThree = new Workout(
-['Rest'],
-['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25','Crunches 5x25'],
-['Rest'],
-['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell press 3X12', 'Planks 2x60', 'Burpies 2x25'],
-['Rest'],
-['Run 1x15', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
-['Rest'],
-0,0,0);
+  ['Rest'],
+  ['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25','Crunches 5x25'],
+  ['Rest'],
+  ['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell press 3X12', 'Planks 2x60', 'Burpies 2x25'],
+  ['Rest'],
+  ['Run 1x15', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
+  ['Rest'],
+  0,0,0);
+
 var beginToneFive = new Workout(
   ['Rest'],
   ['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25', 'Crunches 5x25'],
   ['Run 1x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension 3x12', 'Chin-Ups 3x5'],
-  ['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell Press 3X12', 'Planks 2x60', 'Burpies 2x25'],
+  ['Run 1x15', 'Deadlift 3x12', 'Standing Dumbbell Press 3x12', 'Planks 2x60', 'Burpies 2x25'],
   ['Run 1x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension', '3x12Chin-Ups 3x5'],
   ['Run 1x15', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
@@ -45,7 +46,7 @@ var beginBuildThree = new Workout(
   ['Rest'],
   ['Squats 3x10', 'Bench Press 3x10','Barbell Rows 3x10','Crunches 4x25'],
   ['Rest'],
-  ['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Crunches 3,10'],
+  ['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Crunches 3x10'],
   ['Rest'],
   ['Squats 3x10','Bench 3x10', 'Barbell Rows 3x10', 'Crunches 4x25'],
   ['Rest'],
@@ -70,6 +71,7 @@ var intermediateToneThree = new Workout(
   ['Run 1x20', 'Bent Over Row 4x12', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
   1,0,0);
+
 var intermediateToneFive = new Workout(
   ['Rest'],
   ['Run 1x20', 'Dumbbell squats 3x20', 'One Arm Barbell Rows 3X12', 'Dumbbell Lunges 3x20','Pushups 4x25', 'Crunches 5x25'],
@@ -79,6 +81,7 @@ var intermediateToneFive = new Workout(
   ['Run 1x20', 'Inverted rows 4x12', 'Dumbbell Lunges 3x12', 'Pushups 4x25', 'Shoulder Press 3x12', 'Pull ups 3x5'],
   ['Rest'],
   1,0,1);
+
 var intermediateBuildThree = new Workout(
   ['Rest'],
   ['Squats 3x10', 'Bench Press 3x10', 'Barbell Rows 3x10', 'Curls 3x10', 'Tricep Extensions 3x10', 'Dips 5x10', 'Crunches 4x25'],
@@ -88,6 +91,7 @@ var intermediateBuildThree = new Workout(
   ['Squats 3x10', 'Bench 3x10', 'Barbell Rows 3x10', 'Lat Pulldowns 3x10', 'Dips 5x10', 'Lateral Raises 4x10', 'Crunches 4x 25'],
   ['Rest'],
   1,1,0);
+
 var intermediateBuildFive = new Workout(
   ['Rest'],
   ['Squats 3x10', 'Leg press 3x10', 'Leg curls  3x10', 'Calf Raises 4x10', 'Crunches 4x25'],
@@ -119,24 +123,24 @@ var advancedToneFive = new Workout(
   2,0,1);
 
 var advancedBuildThree = new Workout(
-['Rest'],
-['Squats 3x10','Bench Press 3x10','Barbell Rows 3x10','Curls 3x10','Tricep Extensions 3x10','Lateral Barbell Raises 3x10','Dips 5x10','Crunches 4x25'],
-['Rest'],
-['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Dumbbell Flys 3x10','Pullups 5x5','Incline Bench Press 3x10','Bent Over Rows 3x10','Crunches 4x25'],
-['Rest'],
-['Squats 3x10','Bench 3x10','Clean 3x10','Barbell Rows 3x10','Lat Pulldowns 3x10','Dips 5x10','Lateral Raises 4x10','Crunches 4x 25'],
-['Rest'],
-2,1,0);
+  ['Rest'],
+  ['Squats 3x10','Bench Press 3x10','Barbell Rows 3x10','Curls 3x10','Tricep Extensions 3x10','Lateral Barbell Raises 3x10','Dips 5x10','Crunches 4x25'],
+  ['Rest'],
+  ['Squats 3x10','Overhead Press 3x10','Deadlift 3x10','Dumbbell Flys 3x10','Pullups 5x5','Incline Bench Press 3x10','Bent Over Rows 3x10','Crunches 4x25'],
+  ['Rest'],
+  ['Squats 3x10','Bench 3x10','Clean 3x10','Barbell Rows 3x10','Lat Pulldowns 3x10','Dips 5x10','Lateral Raises 4x10','Crunches 4x 25'],
+  ['Rest'],
+  2,1,0);
 
 var advancedBuildFive = new Workout(
-['Rest'],
-['Squats 3x10','Leg press 3x10','Leg curls  3x10','Calf Raises 4x10','Crunches 4x25','Leg Extension 3x10'],
-['Dumbbell Bench Press 3x10','Dumbbell Flyes 3x 10','Incline Bench Press 3x10','Lateral Raises 3x10','Dumbbell Front Raises 4x10','Plank 3x60'],
-['Barbell Rows 3x10','Deadlift 3x10','Dumbbell Shrugs 4x10','Widegrip Pulldowns 3x10','Pullups 5x5','Crunches 4x25'],
-['Overhead Press 3x10','Front Dumbbell Raise 3x10','Dips 4x10','Seated rows 4x10','Lateral Dumbbell Raises 4x10','Incline Bench 3x10'],
-['Barbell Curls 3x10','Tricep Extension 3x10','Dumbbell Lateral Raise 3x10','Pushups 4x25','Dumbbell Overhead Press 3x10','Crunches 3x10'],
-['Rest'],
-2,1,1);
+  ['Rest'],
+  ['Squats 3x10','Leg press 3x10','Leg curls  3x10','Calf Raises 4x10','Crunches 4x25','Leg Extension 3x10'],
+  ['Dumbbell Bench Press 3x10','Dumbbell Flyes 3x 10','Incline Bench Press 3x10','Lateral Raises 3x10','Dumbbell Front Raises 4x10','Plank 3x60'],
+  ['Barbell Rows 3x10','Deadlift 3x10','Dumbbell Shrugs 4x10','Widegrip Pulldowns 3x10','Pullups 5x5','Crunches 4x25'],
+  ['Overhead Press 3x10','Front Dumbbell Raise 3x10','Dips 4x10','Seated rows 4x10','Lateral Dumbbell Raises 4x10','Incline Bench 3x10'],
+  ['Barbell Curls 3x10','Tricep Extension 3x10','Dumbbell Lateral Raise 3x10','Pushups 4x25','Dumbbell Overhead Press 3x10','Crunches 3x10'],
+  ['Rest'],
+  2,1,1);
 
 var workouts = [beginToneThree, beginToneFive, beginBuildThree, beginBuildFive, intermediateToneThree, intermediateToneFive, intermediateBuildThree, intermediateBuildFive, advancedToneThree, advancedToneFive, advancedBuildThree, advancedBuildFive];
 //function that compares choices array from localstorage to lvls, goals, and splits of our Workouts
