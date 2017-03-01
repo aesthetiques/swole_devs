@@ -11,6 +11,10 @@ html{
   opacity: .5;*/
 }
 
+#workout-name {
+  font-family: 'Squada One',cursive;
+}
+
 .day-title {
   font-family: 'Squada One',cursive;
 }

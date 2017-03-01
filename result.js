@@ -9,7 +9,8 @@ function newElement(elType, elAttribute, elAttributeName, elParentId, elText){
 }
 
 //construction function for each workout
-function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
+function Workout(name, sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
+  this.name = name,
   this.sun = sun,
   this.mon = mon,
   this.tues = tues,
@@ -23,6 +24,7 @@ function Workout(sun, mon,tues, weds, thurs, fri, sat,lvl,goal,split){
   this.split = split;
 }
 var beginToneThree = new Workout(
+  'Beginner 3-day tone workout:',
   ['Rest'],
   ['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25','Crunches 5x25'],
   ['Rest'],
@@ -33,6 +35,7 @@ var beginToneThree = new Workout(
   0,0,0);
 
 var beginToneFive = new Workout(
+  'Beginner 5-day tone workout:',
   ['Rest'],
   ['Run 1x15', 'Dumbbell squats 3x20', 'Dumbbell Lunges 3x20', 'Pushups 4x25', 'Crunches 5x25'],
   ['Run 1x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension 3x12', 'Chin-Ups 3x5'],
@@ -43,6 +46,7 @@ var beginToneFive = new Workout(
   0,0,1);
 //new Workout called beginBuildThree
 var beginBuildThree = new Workout(
+  'Beginner 3-day build workout:',
   ['Rest'],
   ['Squats 3x10', 'Bench Press 3x10','Barbell Rows 3x10','Crunches 4x25'],
   ['Rest'],
@@ -53,6 +57,7 @@ var beginBuildThree = new Workout(
   0,1,0);
 //new workout called beginBuildFive
 var beginBuildFive = new Workout(
+  'Beginner 5-day build workout:',
   ['Rest'],
   ['Squat 3x10','Leg press 3x10','Leg curls 3x10','Crunches 4x25'],
   ['Dumbbell Bench Press 3x10','Dumbbell Flys 3x10','Incline Bench Press 3x10'],
@@ -63,6 +68,7 @@ var beginBuildFive = new Workout(
   0,1,1);
 
 var intermediateToneThree = new Workout(
+  'Intermediate 3-day tone workout:',
   ['Rest'],
   ['Run 1x20', 'Dumbbell squats 3x20', 'One Arm Barbell Rows 3X12', 'Dumbbell Lunges 3x20', 'Pushups 4x25', 'Crunches 5x25'],
   ['Rest'],
@@ -73,6 +79,7 @@ var intermediateToneThree = new Workout(
   1,0,0);
 
 var intermediateToneFive = new Workout(
+  'Intermediate 5-day tone workout:',
   ['Rest'],
   ['Run 1x20', 'Dumbbell squats 3x20', 'One Arm Barbell Rows 3X12', 'Dumbbell Lunges 3x20','Pushups 4x25', 'Crunches 5x25'],
   ['Run 1x20', 'Front-squats 3x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension 3x12', 'Chin-Ups 3x5'],
@@ -83,6 +90,7 @@ var intermediateToneFive = new Workout(
   1,0,1);
 
 var intermediateBuildThree = new Workout(
+  'Intermediate 3-day build workout:',
   ['Rest'],
   ['Squats 3x10', 'Bench Press 3x10', 'Barbell Rows 3x10', 'Curls 3x10', 'Tricep Extensions 3x10', 'Dips 5x10', 'Crunches 4x25'],
   ['Rest'],
@@ -93,6 +101,7 @@ var intermediateBuildThree = new Workout(
   1,1,0);
 
 var intermediateBuildFive = new Workout(
+  'Intermediate 5-day build workout:',
   ['Rest'],
   ['Squats 3x10', 'Leg press 3x10', 'Leg curls  3x10', 'Calf Raises 4x10', 'Crunches 4x25'],
   ['Dumbbell Bench Press 3x10', 'Dumbbell Flyes 3x10', 'Incline Bench Press 3x10', 'Lateral Raises 3x10', 'Plank 3x60'],
@@ -103,6 +112,7 @@ var intermediateBuildFive = new Workout(
   1,1,1);
 
 var advancedToneThree = new Workout(
+  'Advanced 3-day tone workout:',
   ['Rest'],
   ['Run 1x20','Dumbbell squats 3x20','One Arm Barbell Rows 3X12','Dumbbell Lunges 3x20','Pullups 5x5','Pushups 4x25','Crunches 5x25'],
   ['Rest'],
@@ -113,6 +123,7 @@ var advancedToneThree = new Workout(
   2,0,0);
 
 var advancedToneFive = new Workout(
+  'Advanced 5-day tone workout:',
   ['Rest'],
   ['Run 1x20', 'Dumbbell squats 3x20', 'One Arm Barbell Rows 3X12', 'Dumbbell Lunges 3x20', 'Pushups 4x25', 'Crunches 5x25', 'Dumbbell Thrusters 4x20'],
   ['Run 1x20', 'Front-squats 3x15', 'Shrugs 3x12', 'Squats 4x12', 'Leg Extension 3x12', 'Chin-Ups 3x5', 'Dumbbell Thrusters 4x20'],
@@ -123,6 +134,7 @@ var advancedToneFive = new Workout(
   2,0,1);
 
 var advancedBuildThree = new Workout(
+  'Advanced 3-day build workout:',
   ['Rest'],
   ['Squats 3x10','Bench Press 3x10','Barbell Rows 3x10','Curls 3x10','Tricep Extensions 3x10','Lateral Barbell Raises 3x10','Dips 5x10','Crunches 4x25'],
   ['Rest'],
@@ -133,6 +145,7 @@ var advancedBuildThree = new Workout(
   2,1,0);
 
 var advancedBuildFive = new Workout(
+  'Advanced 5-day build workout:',
   ['Rest'],
   ['Squats 3x10','Leg press 3x10','Leg curls  3x10','Calf Raises 4x10','Crunches 4x25','Leg Extension 3x10'],
   ['Dumbbell Bench Press 3x10','Dumbbell Flyes 3x 10','Incline Bench Press 3x10','Lateral Raises 3x10','Dumbbell Front Raises 4x10','Plank 3x60'],
@@ -159,6 +172,7 @@ var selectedWorkout = findWorkout();
 
 function displayWorkout(workout){
   var week = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+  newElement('h2', 'id', 'workout-title', 'workout-name', workout.name);
   for(var i = 0; i < workout.days.length; i++){
     var todaysWorkout = workout.days[i];
     for(var j = 0; j < todaysWorkout.length; j++){
