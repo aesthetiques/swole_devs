@@ -6,11 +6,15 @@ html{
 }
 
 #workout-container{
-  font-size: 50px;
+  font-size: 35px;
   color: #fff;
   margin-bottom: 65px;
   /*background-color: white;
   opacity: .5;*/
+}
+
+h2 {
+  font-size: 70px;
 }
 
 #workout-name {
@@ -27,6 +31,11 @@ html{
 
 ul {
   list-style-type: none;
+  margin-left: 40px;
+}
+
+li{
+  margin-top: 10px;
 }
 
 /*header{
