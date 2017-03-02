@@ -7,3 +7,9 @@
 #### Caleb Wells
 #### Patrick Sheridan
 #### Scott Brendan
+
+###We used the social media buttons from the Chocolate Pizza project.
+
+###We used this font http://www.dafont.com/old-printing-press.font?text=getFit&psize=l&back=themefor our logo.
+
+###We used a button generator to get our quiz buttons CSS - http://www.bestcssbuttongenerator.com/
