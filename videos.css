@@ -1,0 +1,32 @@
+body{
+  width: 980px;
+  background: url('img/shoes-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin-left: 20px;
+}
+
+h1{
+  font-size: 75px;
+}
+
+.list{
+  text-align: left;
+  padding-left: 20px;
+  display: inline-block;
+  background-color: rgba(215,215,215, 0.95);
+  opacity: .75;
+  padding-bottom: 25px;
+}
+
+.list a{
+  color: black;
+  font-size: 30px;
+}
+
+.workoutList{
+  margin-top: -30px;
+}
+
+.workoutHeader{
+  font-size: 50px;
+}
